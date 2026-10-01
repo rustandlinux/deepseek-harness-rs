@@ -1,0 +1,7 @@
+/target
+/deepseek-harness/
+*.tgz
+*.tar.gz
+.env
+
+.dsh/

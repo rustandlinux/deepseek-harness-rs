@@ -1,0 +1,35 @@
+[workspace]
+members = [
+    "crates/dsh-types",
+    "crates/dsh-session",
+    "crates/dsh-llm",
+    "crates/dsh-tools",
+    "crates/dsh-agent",
+    "crates/dsh-storage",
+    "crates/dsh-acp",
+    "crates/dsh-cli",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["DeepSeek Harness Rust Team"]
+license = "MIT"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+tokio = { version = "1.40", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.10", features = ["v4", "serde"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+futures-util = "0.3"
+tokio-stream = "0.1"
+tokio-util = "0.7"
+async-trait = "0.1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+clap = { version = "4.5", features = ["derive"] }

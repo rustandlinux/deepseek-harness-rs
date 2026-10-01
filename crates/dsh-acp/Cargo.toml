@@ -1,0 +1,27 @@
+[package]
+name = "dsh-acp"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+dsh-types = { path = "../dsh-types" }
+dsh-session = { path = "../dsh-session" }
+dsh-agent = { path = "../dsh-agent" }
+dsh-llm = { path = "../dsh-llm" }
+dsh-tools = { path = "../dsh-tools" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+futures-util = { workspace = true }
+tracing = { workspace = true }
+async-trait = { workspace = true }
+uuid = { workspace = true }
+
+[[example]]
+name = "acp_stdio_server"
+path = "examples/acp_stdio_server.rs"
+

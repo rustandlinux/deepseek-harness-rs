@@ -1,0 +1,21 @@
+[package]
+name = "dsh-tools"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+dsh-types = { path = "../dsh-types" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+async-trait = { workspace = true }
+uuid = { workspace = true }
+
+[[example]]
+name = "tool_execution"
+path = "examples/tool_execution.rs"
+

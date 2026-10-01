@@ -1,0 +1,22 @@
+[package]
+name = "dsh-llm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+dsh-types = { path = "../dsh-types" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { workspace = true }
+futures-util = { workspace = true }
+tokio = { workspace = true }
+tokio-stream = { workspace = true }
+tracing = { workspace = true }
+
+[[example]]
+name = "live_interact"
+path = "examples/live_interact.rs"
+
